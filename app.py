@@ -5,10 +5,10 @@ app = Flask(__name__)
 @app.route('/', methods=['GET','POST'])
 
 def home():
+    movies_list = []
     if request.method=='POST':
         user_input = request.form.get('search')
         print(user_input)
-        # movies_list = []
         movies_list  = mrs.recommend(user_input)
         # print(movies_list)
     return render_template('index.html', prediction=movies_list)
