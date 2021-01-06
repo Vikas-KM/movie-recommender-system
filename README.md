@@ -35,6 +35,7 @@ This project is based on the IMDB 5000 dataset from the kaggle
 To run this app locally you will need to install the packages mentioned in **requirements.txt**
 
 `cd movie-recommender-system`
+
 `python app.py`
 
 open browser http://127.0.0.1:5000/ and play
