@@ -10,7 +10,7 @@ def home():
         user_input = request.form.get('search')
         print(user_input)
         movies_list  = mrs.recommend(user_input)
-        # print(movies_list)
+        print(movies_list)
     return render_template('index.html', prediction=movies_list)
 
 if __name__ == '__main__':

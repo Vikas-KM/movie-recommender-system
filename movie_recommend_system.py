@@ -42,7 +42,7 @@ cosine_sim = cosine_similarity(count_matrix)
 def recommend(movie):
     movie = movie.lower()
     if movie not in df1['movie_title'].unique():
-        return('Sorry! The movie you requested is not in our database. Please check the spelling or try with some other movies')
+        return('Sorry! Movie not found!')
     else:
         i = df1.loc[df1['movie_title']==movie].index[0]
         lst = list(enumerate(cosine_sim[i]))

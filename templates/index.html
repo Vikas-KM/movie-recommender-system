@@ -66,22 +66,26 @@ li {
 <h1>Movie Recommender System</h1>
 
 <!-- <p>Enter the movie name</p> -->
+
+
 <form class="example" method="POST" style="margin:auto;max-width:300px" onsubmit="showMovies()">
   <input type="text" placeholder="enter movie name.." name="search" id="input">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 
   <ul>
+
+    {% if prediction == 'Sorry! Movie not found!' %}
+      <li>Sorry! Movie not found!</li>
+    {% else %}
     {% for movies in prediction %}
     <li>
       {{movies}}
     </li>
     {% endfor %}
-  </ul>  
+    {% endif %}
 
-<!-- <div>
-  <img src="../movies_recommended.jpg" alt="Recommended Movies">
-</div> -->
+  </ul>  
 
 
 </body>
